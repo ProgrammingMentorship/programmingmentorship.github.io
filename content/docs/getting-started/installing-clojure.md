@@ -9,7 +9,7 @@ This is a guide to installing Clojure on Windows from scratch.
 
 ## Install Scoop
 
-Open Powershell & install Scoop using commands below.
+**Step one:** Open Powershell & install Scoop using commands below.
 
 ```ps1
 # First try to run this command
@@ -22,21 +22,22 @@ to change the security settings.
 Run command `get-executionpolicy -List` and take note of
 what your setting are before we change them.
 
-2. Run the following commands. You may need to update them
-  to restore it to your other settings, but that should be
-  somewhat obvious.
-  When it prompts you respond with Y and hit enter
-  ```ps1
-  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-  irm get.scoop.sh | iex
-  Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
-  ```
+**Step two:** Run the following commands. You may need to update them
+to restore it to your other settings, but that should be
+somewhat obvious.
 
-3. use Get-ExecutionPolicy -List again to check if your
-  before and after is the same. Assuming you care of
-  course.
+When it prompts you respond with Y and hit enter:
 
-# Install Java
+```ps1
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
+```
+
+**Step three:** Use Get-ExecutionPolicy -List again to check if your
+before and after is the same. Assuming you care of course.
+
+## Install Java
 
 Open a new **cmd** window and run below commands:
 
@@ -90,20 +91,29 @@ another tool.
 
 Use this tool, the install instructions should be enough
 https://github.com/seancorfield/deps-new
-The command to run is
-clojure -Ttools install-latest :lib
-io.github.seancorfield/deps-new :as new
+
+The command to run is:
+
+```ps1
+clojure -Ttools install-latest :lib io.github.seancorfield/deps-new :as new
+```
 
 Note that if you use any other features of the install then you will need to escape the
 strings differently as windows decided to do something much worse with their cmd line
 and powershell tools. For reference here is an install for the precursor tool where the
-version is specified in triple quotes due to how the cmd line escapes the strings
+version is specified in triple quotes due to how the cmd line escapes the strings.
+
+```ps1
 clojure -Ttools install com.github.seancorfield/clj-new '{:git/tag """v1.2.404"""}' :as
 clj-new
+```
 
-Create a new project in your workspace folder using command below
+Create a new project in your workspace folder using command below:
+
+```ps1
 clojure -Tnew app :name myusername/mynewapp
 lein new app my-stuff
+```
 
 ## Setup Dev Environment
 
