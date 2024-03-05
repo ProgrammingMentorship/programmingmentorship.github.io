@@ -15,23 +15,16 @@ At a high level, perform the following steps:
 
 ## Install Prerequisites
 
-Using the builtin **apt** package manager, install development tools:
+Using the builtin **apt** package manager, install dependencies:
 
 ```
 apt-get install emacs vim git syncthing inotify-tools filezilla \
                 fonts-firacode fonts-terminus curl gpg gawk m4 \
                 build-essential software-properties-common rlwrap \
-                qdirstat kompare
+                qdirstat kompare curl autoconf gpg
 ```
 
-Install dev dependencies:
-
-```
-apt-get -y install curl git dirmngr gpg gawk build-essential autoconf \
-        m4 libncurses5-dev libwxgtk3.2-dev libwxgtk-webview3.2-dev \
-        libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev \
-        xsltproc fop libxml2-utils libncurses-dev default-jdk default-jre
-```
+## Install ASDF
 
 Install the ASDF software version manager:
 
