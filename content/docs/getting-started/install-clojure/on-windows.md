@@ -1,5 +1,5 @@
 ---
-title: Clojure on Windows
+title: Windows
 weight: 1
 ---
 

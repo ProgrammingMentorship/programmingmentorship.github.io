@@ -1,5 +1,5 @@
 ---
-title: Clojure on MacOS
+title: MacOS
 weight: 1
 ---
 
