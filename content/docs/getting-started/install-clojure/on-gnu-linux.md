@@ -7,6 +7,14 @@ weight: 1
 
 Instructions for **Debian GNU/Linux 12** (bookworm) 6.1.0-13-amd64.
 
+At a high level, perform the following steps:
+
+1. Install build tools and prerequisites
+1. Install the ASDF language manager tool
+1. Install Java and Clojure using ASDF
+
+## Install Prerequisites
+
 Using the builtin **apt** package manager, install development tools:
 
 ```
@@ -38,6 +46,9 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 
 Close and reopen your terminal.
 
+
+## Use ASDF to Install Clojure
+
 Install Java and Clojure:
 
 ```
@@ -58,4 +69,7 @@ Verify that everything installed correctly:
 
 ```
 java -version
+clj -version
 ```
+
+...congrats! You're now ready to program in Clojure!
