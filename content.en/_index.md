@@ -3,22 +3,25 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+
+
 
 {{< columns >}}
-## Astris ipse furtiva
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+## Good Foundations
+
+With the aim of grounding students in a strong foundation of systems
+design and computer science, we teach *functional programming* using
+the Clojure language.
 
 <--->
 
-## Suis quot vota
+## Practical Fun
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
+To keep students engaged, we emphasize project-based collaborative
+work that produce interesting programs students can show off and be
+proud of.
+
 {{< /columns >}}
 
 
@@ -28,14 +31,13 @@ Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
 tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
 sequens!
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
+```scm
+(define (sum-of-squares x y)
+  (+ (square x) (square y)))
+  
+(sum-of-squares 3 4)
+25
+```
 ## Locis suis novi cum suoque decidit eadem
 
 Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
