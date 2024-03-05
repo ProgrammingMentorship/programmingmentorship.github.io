@@ -11,6 +11,6 @@ While the history of this development is a fascinating topic all on its own, thi
 
 **Explore the sub-topics of this section to learn more!**
 
-1. [**Hardware**]({{< relref "/docs/getting-started/what-is/computing/hardware" >}})
-1. [**Software**]({{< relref "/docs/getting-started/what-is/computing/software" >}})
-1. [**Networks**]({{< relref "/docs/getting-started/what-is/computing/networks" >}})
+1. [**Hardware**]({{< relref "/docs/getting-started/what-is-computing/hardware" >}})
+1. [**Software**]({{< relref "/docs/getting-started/what-is-computing/software" >}})
+1. [**Networks**]({{< relref "/docs/getting-started/what-is-computing/networks" >}})
