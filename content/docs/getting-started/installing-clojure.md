@@ -3,9 +3,11 @@ title: Installing Clojure
 weight: 1
 ---
 
+# Clojure on Windows
+
 This is a guide to installing Clojure on Windows from scratch.
 
-# Install Scoop
+## Install Scoop
 
 Open Powershell & install Scoop using commands below.
 
@@ -48,10 +50,6 @@ call scoop update --all
 ```
 
 Note for my users because I control the environment, steps 1 and
-Clojure Windows Setup
-December 5, 2023 12:07
-Devs Page 1
-Note for my users because I control the environment, steps 1 and
 2 is what I use to install my programs as well since it is enough
 for the clojure jar files to run. We do not need to go any
 further if users are not doing development. The reason I do this
@@ -67,16 +65,17 @@ Note do not use temurin-lts-jdk, I've had problems with
 it and clojure for various dev tools. Use openjdk as we
 already installed above.
 
-Run the following commands
+**Run the following commands:**
+
+```ps1
 scoop bucket add java
 scoop bucket add extras
-scoop bucket add scoop-clojure
-https://github.com/littleli/scoop-clojure
+scoop bucket add scoop-clojure https://github.com/littleli/scoop-clojure
 scoop install clj-deps
 scoop update clj-deps
-If you want leiningen, then also run scoop install
+# If you want leiningen, then also run 'scoop install'
 leiningen
-
+```
 ## Install a new project tool
 
 A reasonable expectation with a modern platform is the
@@ -108,9 +107,8 @@ lein new app my-stuff
 
 ## Setup Dev Environment
 
-Devs Page 2
-Setup Dev Environment
-VS Code
+### VS Code
+
 Install VS code and use Calva extension. You can figure
 out how to do this on your own.
 
@@ -128,17 +126,15 @@ screen
 
 You may see a couple of options come up, don't worry if
 you don't see a particular option, it may already be
-configured
-Workspace root
-Deps.edn or leiningen
+configured. Workspace root: Deps.edn or leiningen
 
-For emacs, you can refer to this page in brave clojure book.
-https://www.braveclojure.com/basic-emacs/
-Note that I actually prefer the prelude configuration for
-emacs https://prelude.emacsredux.com/en/latest/ instead
+For emacs, you can refer to [this page in brave clojure book](https://www.braveclojure.com/basic-emacs/).
+
+_Note that I actually prefer the [prelude configuration for
+emacs](https://prelude.emacsredux.com/en/latest/) instead
 of the one in brave clojure, but the brave clojure one
 will get you started and you can configure it from there.
 The prelude extension is maintained by the guy who
 developed/maintains many of the clojure tools for emacs
 such as CIDER which is the backbone of many other editor
-clojure integrations as well including Calva in VS Code
+clojure integrations as well including Calva in VS Code._
