@@ -1,6 +1,6 @@
 ---
 title: Windows
-weight: 1
+weight: 2
 ---
 
 # Clojure on Windows

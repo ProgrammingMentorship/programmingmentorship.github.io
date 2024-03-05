@@ -3,4 +3,6 @@ weight: 3
 title: "Networks"
 ---
 
-Placeholder
+# Networks
+
+Together, groups of computers running software form computer networks. A computer network is a system of its own.

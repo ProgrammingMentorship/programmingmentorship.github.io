@@ -1,8 +1,8 @@
 ---
 title: MacOS
-weight: 1
+weight: 3
 ---
 
 # Clojure on MacOS
 
-Instructions pending
+Instructions pending. Use homebrew.
