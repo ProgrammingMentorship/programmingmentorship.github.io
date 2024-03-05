@@ -1,5 +1,5 @@
 ---
-title: Installing Clojure
+title: Clojure on Windows
 weight: 1
 ---
 

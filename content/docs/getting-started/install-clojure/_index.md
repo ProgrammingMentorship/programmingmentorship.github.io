@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: "Installing Clojure"
+title: "Install Clojure"
 ---
 
 Pick an operating system to learn more.
