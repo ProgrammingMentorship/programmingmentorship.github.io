@@ -1,11 +1,11 @@
 ---
-title: "Debian"
+title: "GNU/Linux"
 weight: 1
 ---
 
-# Clojure on Debian
+# Clojure on GNU/Linux
 
-Instructions for Debian GNU/Linux 12 (bookworm) 6.1.0-13-amd64.
+Instructions for **Debian GNU/Linux 12** (bookworm) 6.1.0-13-amd64.
 
 Using the builtin **apt** package manager, install development tools:
 

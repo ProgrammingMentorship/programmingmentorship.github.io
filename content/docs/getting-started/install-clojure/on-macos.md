@@ -5,4 +5,6 @@ weight: 3
 
 # Clojure on MacOS
 
-Instructions pending. Use homebrew.
+Follow the official guide:
+
+https://clojure.org/guides/install_clojure
