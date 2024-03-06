@@ -46,7 +46,6 @@ mindmap
             Returning Data
             Control Flow
                 Recursion
-                    
         Data
             Primitives
                 Strings
