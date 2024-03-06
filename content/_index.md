@@ -3,7 +3,27 @@ title: Introduction
 type: docs
 ---
 
+# Learn to Program!
 
+Join us in a fun-first community to learn the fundamentals of good programming.
+
+{{< mermaid class="center" >}}
+flowchart LR
+    C[Clojure] --> A[Functions]
+    C --> D[Data]
+    A --> R[Recursion]
+    A --> CF[Control Flow]
+    D --> P[Primitives]
+    D --> DS[Data Structures]
+    R --> PR[Fun & Projects]
+    CF --> PR
+    P --> PR
+    DS --> PR
+    PR --> P1[JavaScript & Web Apps]
+    PR --> P2[C & Embedded]
+    PR --> P3[Server Systems]
+    PR --> P4[Video Games]
+{{< /mermaid >}}
 
 
 {{< columns >}}
@@ -25,11 +45,12 @@ proud of.
 {{< /columns >}}
 
 
-## Tempora nisi nunc
+{{< hint warning >}}
+**Course Under Construction**  
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+{{< /hint >}}
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
 
 ```scm
 (define (sum-of-squares x y)
@@ -38,6 +59,3 @@ sequens!
 (sum-of-squares 3 4)
 25
 ```
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
