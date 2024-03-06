@@ -11,7 +11,7 @@ This is a guide to installing Clojure on Windows from scratch.
 
 **Step one:** Open Powershell & install Scoop using commands below.
 
-```ps1
+```
 # First try to run this command
 irm get.scoop.sh | iex
 ```
@@ -28,7 +28,7 @@ somewhat obvious.
 
 When it prompts you respond with Y and hit enter:
 
-```ps1
+```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh | iex
 Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
@@ -41,7 +41,7 @@ before and after is the same. Assuming you care of course.
 
 Open a new **cmd** window and run below commands:
 
-```ps1
+```
 call scoop install 7zip
 call scoop install git
 call scoop bucket add java
@@ -68,7 +68,7 @@ already installed above.
 
 **Run the following commands:**
 
-```ps1
+```
 scoop bucket add java
 scoop bucket add extras
 scoop bucket add scoop-clojure https://github.com/littleli/scoop-clojure
@@ -94,7 +94,7 @@ https://github.com/seancorfield/deps-new
 
 The command to run is:
 
-```ps1
+```
 clojure -Ttools install-latest :lib io.github.seancorfield/deps-new :as new
 ```
 
@@ -103,14 +103,14 @@ strings differently as windows decided to do something much worse with their cmd
 and powershell tools. For reference here is an install for the precursor tool where the
 version is specified in triple quotes due to how the cmd line escapes the strings.
 
-```ps1
+```
 clojure -Ttools install com.github.seancorfield/clj-new '{:git/tag """v1.2.404"""}' :as
 clj-new
 ```
 
 Create a new project in your workspace folder using command below:
 
-```ps1
+```
 clojure -Tnew app :name myusername/mynewapp
 lein new app my-stuff
 ```

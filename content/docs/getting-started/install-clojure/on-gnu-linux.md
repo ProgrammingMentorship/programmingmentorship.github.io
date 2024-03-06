@@ -18,10 +18,9 @@ At a high level, perform the following steps:
 Using the builtin **apt** package manager, install dependencies:
 
 ```
-apt-get install emacs vim git syncthing inotify-tools filezilla \
-                fonts-firacode fonts-terminus curl gpg gawk m4 \
+apt-get install emacs vim git inotify-tools curl gpg gawk m4 \
                 build-essential software-properties-common rlwrap \
-                qdirstat kompare curl autoconf gpg
+                autoconf gpg apt-transport-https
 ```
 
 ## Install ASDF
@@ -65,4 +64,21 @@ java -version
 clj -version
 ```
 
-...congrats! You're now ready to program in Clojure!
+
+## Install VS Code
+
+If you'd like to use VS Code as your editor, follow 
+[these steps](https://code.visualstudio.com/docs/setup/linux)
+to install it, or run these commands:
+
+```
+wget -O code.deb https://update.code.visualstudio.com/latest/linux-deb-x64/
+sudo dpkg -i code.deb
+sudo apt-get install -f
+```
+
+Install the following extensions:
+
+1. [Calva](https://calva.io/getting-started/)
+
+...that's it. You're now ready to program in Clojure!
