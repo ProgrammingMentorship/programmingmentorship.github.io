@@ -65,11 +65,25 @@ Finally, add this line to your `~/.zshrc` file:
 . ~/.asdf/plugins/java/set-java-home.zsh
 ```
 
-**Close and reopen your terminal.** Then run:
+**Close and reopen your terminal.** 
+
+Verify that everything is installed correctly:
 
 ```
 java -version
 clj -version
 ```
 
-...if the versions pop up correctly, we are done!
+...if the versions pop up correctly, we are ready!
+
+## Install VS Code
+
+Follow the official instructions to install VS Code:
+
+https://code.visualstudio.com/docs/setup/mac
+
+Install the following extensions:
+
+1. [Calva](https://calva.io/getting-started/)
+
+...that's it. You're now ready to program in Clojure!

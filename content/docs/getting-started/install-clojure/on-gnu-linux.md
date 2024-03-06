@@ -36,7 +36,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 . "$HOME/.asdf/completions/asdf.bash"
 ```
 
-Close and reopen your terminal.
+**Close and reopen your terminal.**
 
 
 ## Use ASDF to Install Clojure
@@ -56,6 +56,14 @@ asdf plugin add clojure https://github.com/asdf-community/asdf-clojure.git
 asdf install clojure 1.11.1.1413
 asdf global clojure 1.11.1.1413
 ```
+
+Add the following line to `~/.bash_profile`
+
+```
+. "~/.asdf/plugins/java/set-java-home.bash"
+```
+
+**Close and reopen your terminal.**
 
 Verify that everything installed correctly:
 
