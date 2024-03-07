@@ -1,0 +1,16 @@
+{{ if (and (fileExists (print "/assets" .Destination)) (not (eq .Destination ""))) }}
+  {{ $image := resources.Get (printf "%s" .Destination) }}
+
+  <div class="rcf-svg">
+    {{ $image.Content | safeHTML }}
+  </div>
+  {{ else }}
+    <!-- In case the image is not found on the filesystem for some reason... -->
+    <img 
+      class="rcf-svg external-image unoptimized" 
+      src="{{ .Destination | safeURL }}" 
+      {{- if .Text -}} alt="{{ .Text }}" {{ end }}
+      {{- if .Title -}} title="{{ .Title }}" {{ end }}
+      loading="lazy" 
+    />
+{{ end }}
