@@ -74,8 +74,10 @@ scoop bucket add extras
 scoop bucket add scoop-clojure https://github.com/littleli/scoop-clojure
 scoop install clj-deps
 scoop update clj-deps
-# If you want leiningen, then also run 'scoop install'
-leiningen
+```
+If you want leiningen, then also run
+```
+scoop install leiningen
 ```
 ## Install New Project Generation Tool (deps-new)
 
