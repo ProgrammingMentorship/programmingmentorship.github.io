@@ -43,7 +43,7 @@
 <!-- Restore menu position as soon as possible to avoid flickering -->
 {{ $script := resources.Get "lazysizes.min.js" | resources.Minify }}
 {{ with $script.Content }}
-  <script>{{ . | safeJS }}</script>
+  <script async defer>{{ . | safeJS }}</script>
 {{ end -}}
 
 <!-- RSS -->
