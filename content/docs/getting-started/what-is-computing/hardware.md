@@ -106,8 +106,8 @@ reaction changes the _conductivity_ of parts of the disk, forming the
 logic gates we discussed in the previous section.
 
 This step (applying chemicals and projecting an image on the wafer)
-happens a few times with different chemicals.  The picture shown to
-the right shows an example of these stages.
+happens a few times with different chemicals.  The picture shown here
+shows an example of these stages.
 
 <--->
 
@@ -140,9 +140,21 @@ external pins on an IC or CPU
 
 If you look with a microscope at a die, you'll be able to see the
 sections of the processor. Like a city from above, each sector has its
-own purpose and look:
+own purpose and look.
+
+{{< columns >}}
 
 ![Intel Core i7-5960X - 17.6mm x 20.2mm](/img/cores.jpg)
+
+<--->
+
+The "die photo" here is from a desktop processor that would be
+commonly used in a gaming PC. You'll notice that besides the CPU
+cores, each a small processor on its own, there are systems for
+coordinating the actions of the sub-processors and granting access to
+the RAM, which is not stored on this chip.
+
+{{< /columns >}}
 
 At this point, the processor is ready to be included in a computer
 system! It will be embedded in a plastic or metal **package**, and

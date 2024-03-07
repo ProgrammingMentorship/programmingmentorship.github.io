@@ -14,3 +14,7 @@ figcaption {
     font-size: 0.8em;
     color: #888;
 }
+
+.book-columns > div.flex-even {
+  min-width: 18rem;
+}
