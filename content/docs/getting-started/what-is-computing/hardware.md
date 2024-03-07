@@ -160,7 +160,7 @@ Here, the **IC** we discussed in the previous section is attached to
 the board and hidden under that silver heat-sink. With so much
 electricity running through them, processors can get hot!
 
-# Use in Electronics
+## Use in Electronics
 
 Processors are included in so many places you would never expect - not
 just laptops and iPhones, but light bulbs, doorbells, street lights,
@@ -173,7 +173,7 @@ places around you.
 Finally, these boards are packaged up inside shiny plastic and metal
 shells and shipped to consumers... _not!_
 
-**There's one more extremely important thing to include,** and here's
-where you come into the picture!
+**There's one more extremely important thing to include** - here's
+where _**you**_ come into the picture!
 
 Computer hardware runs computer [software]({{< relref "/docs/getting-started/what-is-computing/software" >}}).
