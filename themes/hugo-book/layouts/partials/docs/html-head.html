@@ -40,11 +40,12 @@
 
 {{- template "_internal/google_analytics.html" . -}}
 
-<!-- Restore menu position as soon as possible to avoid flickering -->
-{{ $script := resources.Get "lazysizes.min.js" | resources.Minify }}
-{{ with $script.Content }}
-  <script async defer>{{ . | safeJS }}</script>
-{{ end -}}
+<!-- Lazy Sizes -->
+{{ $global := resources.Get "/js/scripts.js" }}
+{{ $lazyload := resources.Get "/js/lazysizes.min.js" }}
+{{ $jsu := slice $lazyload $global | resources.Concat "js/bundle.js" }}
+{{ $js := $jsu | resources.Minify | resources.Fingerprint "sha512" }}
+<script async defer type="application/javascript" src="{{ $js.Permalink }}"></script>
 
 <!-- RSS -->
 {{- with .OutputFormats.Get "rss" -}}
