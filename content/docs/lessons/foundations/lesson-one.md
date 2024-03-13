@@ -40,8 +40,8 @@ Like an english sentence, expressions have a structure:
 ```
 
 Here is a simple expression that adds two numbers. "+" is
-the operator, and we also give arguments "2" and "3". You can change
-the numbers if you'd like:
+the operator, and we also give arguments "2" and "3". 
+Try changing the numbers and clicking _Run Program_ again.
 
 {{< scheme >}}
 (+ 2 3)
@@ -54,13 +54,28 @@ a lot of powerful things later on. In this case, + _is the
 The **operator** decides how the rest of the **elements** are **evaluated**.
 
 {{< scheme >}}
+(+ 1 2)
+(+ 1 2 3 4)
+{{< /scheme >}}
+Now with Multiplication and Division...
+{{< scheme >}}
+(* 2 4)
+(* 2 4 2)
+
 (/ 20 4)
 (/ 20 4 2)
+(/ 5 2)
 {{< /scheme >}}
 
-Play with the above example. You'll notice that the order really
-matters here - the first element, "20", is successively divided by
+Play with the above example. You'll notice that depending on the **operator**,
+order really matters here - the first element, "20", is successively divided by
 every other element in the list.
+
+You may also notice that expressions such as (/ 5 2) will evaluate to 5/2. Try
+the below instead {{< scheme >}} (/ 5 2.0) {{< /scheme >}}
+
+Notice how it now evaluates to 2.5 instead of the fractional component. 
+This will lead us into a study of **types** in the next sections
 
 **What have we learned?**
 
@@ -70,6 +85,54 @@ every other element in the list.
 
 Now that we have established the following things, we can move along
 to the next topic.
+
+## Values & Types
+
+Each **expression** in the last section produced a **value** whenever it was
+evaluated. Up until this point we have only seen operators that produce
+_numbers_. There are however other **types** of values we need to learn about.
+
+Try running the code below:
+
+{{< scheme >}}
+
+(positive?  5)
+(negative? -5)
+
+{{< /scheme >}}
+
+Notice how we now have _true_ and _false_ values produced from the above
+expressions. These values are referred to as _boolean_ values and are handled
+differently by our computer compared to the _numbers_ we have seen previously.
+
+Every programming lanugage has a series of categories to describe the **values**
+it can work with. We refer to each of these categories as **types**.
+
+We can call the _type_ operator to see what **type** a particular value has
+
+{{< scheme >}}
+(type 5)
+(type 5.2)
+(type "Hello, I am a String of text")
+(type true)
+(type false)
+{{< /scheme >}}
+
+We have other **types** as well, but we will cover these at a later date
+
+{{< scheme >}}
+(type /)
+(type nil)
+(type 'x)
+(type #\a)
+(type (list  1 2 3 4))
+{{< /scheme >}}
+
+### **TODO** _Add custom type function to show difference between integers and floats_
+### **TODO** _Add string capitalize function to show another way expressions can perform operations_
+
+Part of the reason that we care about the **type** a **value** has is so that we
+can store them for later use. This is what we will cover in the next section.
 
 ## Variables
 
@@ -92,12 +155,53 @@ Now you try:
 (+ x y 3)
 {{< /scheme >}}
 
+Let's create a counting function that will increment each time the
+program is run.
+
+First lets setup our counter variable:
+{{< scheme >}}
+(define x 0)
+{{< /scheme >}}
+
+Now let's increment x each time we run the below code. Try running the program a
+few times to see x increase with each run.
+
+{{< scheme >}}
+(define x (+ 1 x))
+
+(+ x 0)
+{{< /scheme >}}
+
+Notice how we are adding zero to x in the last step of the code below. We can
+also just evaluate x directly without having to run it through an expression
+{{<scheme >}} 
+x 
+{{< /scheme >}}
+
+Now what is the type of _x_?
+{{<scheme >}} 
+(type x)
+{{< /scheme >}}
+
+We can store different things inside of _x_ and we will get a different type
+
+{{<scheme >}}
+(define x 0)
+(type x)
+(define x "Hello, I am a string!!")
+(type x)
+(define x true)
+(type x)
+
+{{< /scheme >}}
+
+
 ## Functions
 
 So we can do basic math with the `+ - * /` operators - what else?
 
 Turns out we can _define our own operators._ Wrapping up a set of
-instructions like this is known as writng a **function**. In fact, the
+instructions like this is known as writing a **function**. In fact, the
 `+ - * /` operators we have been using are also functions.
 
 We define a function that adds two to something like this:
