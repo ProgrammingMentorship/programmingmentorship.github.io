@@ -6,7 +6,16 @@ title: "Foundations"
 
 # Foundations: Introduction
 
-This course is a work in progress, and the content is subject to change.
+{{< hint warning >}}
+**Warning: Work in Progress**  
+We are still working to improve this page before releasing it to
+students. It may change considerably before first release.  If you can
+see this message, congrats, you have been introduced to this material
+early to provide feedback!
+
+Use the **edit page** button at the bottom of this lesson to directly
+submit changes for consideration.
+{{< /hint >}}
 
 There are two schools of thought regarding computer science. When
 programs or the problems they solve grow too large, we can choose to
@@ -38,7 +47,9 @@ programming:**
 1. **Data**, which flows in and out of computer systems
 2. **Functions**, which read and transform data
 
-Begin by reading the [**Course Outline**]({{< relref "/docs/lessons/foundations/course-outline" >}}).
+Begin by reading the [**Course Outline**]({{< relref "/docs/lessons/foundations/course-outline" >}}),
+or skip to  [**Lesson One**]({{< relref "/docs/lessons/foundations/lesson-one" >}}).
+
 
 {{< mermaid >}}
 mindmap

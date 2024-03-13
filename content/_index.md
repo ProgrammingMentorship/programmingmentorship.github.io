@@ -46,9 +46,9 @@ proud of.
 
 
 {{< hint warning >}}
-**Course Under Construction**  
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+**Site Under Construction**  
+Our first course is called [**Foundations**]({{< relref "/docs/lessons/foundations" >}})
+and can be previewed now.
 {{< /hint >}}
 
 
