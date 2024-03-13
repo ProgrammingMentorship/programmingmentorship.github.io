@@ -21,21 +21,27 @@ function scmEval(e) {
   var content = document.getElementById(e).value;
   console.log(content);
 
-  // Set things.
-  button.innerHTML = "Running..."
-  button.disabled = true
-  contentBox.disabled = true
-
   function enable(){
     setTimeout(function(){
       button.innerHTML = "Run Program"
       button.disabled = false
       contentBox.disabled = false
-    }, 400);
+    }, 200);
   }
-  
 
-  lips.exec(content).then(
+  var disablePromise = new Promise(function(resolve, reject){
+    // Set things.
+    button.innerHTML = "Running...";
+    button.disabled = true;
+    contentBox.disabled = true;
+    setTimeout(function(){resolve("done");}, 10);
+  });
+  
+  disablePromise
+    .then(function(){
+      return lips.exec(content);
+    })
+    .then(
      function(results) {
        output.innerHTML = "";
        results.forEach(function(result) {
@@ -48,7 +54,6 @@ function scmEval(e) {
          }
          }
        );
-       enable();
      }
   ).catch (function(error) {
     output.innerHTML = "";
@@ -60,6 +65,7 @@ function scmEval(e) {
            output.appendChild(node);
 
     console.error(error);
+    }).finally(function(){
     enable();
   });
 }
