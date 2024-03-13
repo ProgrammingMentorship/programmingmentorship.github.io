@@ -18,3 +18,86 @@ figcaption {
 .book-columns > div.flex-even {
   min-width: 18rem;
 }
+
+.schemeblock {
+display: block;
+width: 100%;
+border-radius: 5px 5px 0 5px;
+
+}
+
+.schemebutton-wrapper{
+text-align: right;
+}
+
+.schemebutton{
+  background: white;
+  border: 1px solid #DDD;
+  border-top: 1px solid transparent;
+  padding: 2px 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.scm-output > p {
+margin: 0;
+}
+
+.scm-output {
+    margin-bottom: 10px;
+}
+
+.schemeblock, .scm-output, .grow-wrap, textarea {
+    font-family: ui-monospace, 
+             Menlo, Monaco, 
+             "Cascadia Mono", "Segoe UI Mono", 
+             "Roboto Mono", 
+             "Oxygen Mono", 
+             "Ubuntu Monospace", 
+             "Source Code Pro",
+             "Fira Mono", 
+             "Droid Sans Mono", 
+             "Courier New", monospace;
+}
+
+
+
+/* From https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/ */
+.grow-wrap {
+  /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+  display: grid;
+}
+.grow-wrap::after {
+  /* Note the weird space! Needed to preventy jumpy behavior */
+  content: attr(data-replicated-value) " ";
+
+  /* This is how textarea text behaves */
+  white-space: pre-wrap;
+
+  /* Hidden from view, clicks, and screen readers */
+  visibility: hidden;
+}
+.grow-wrap > textarea {
+  /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+  resize: none;
+
+  /* Firefox shows scrollbar on growth, you can hide like this. */
+  overflow: hidden;
+}
+.grow-wrap > textarea,
+.grow-wrap::after {
+  /* Identical styling required!! */
+  border: 1px solid #DDD;
+  padding: 0.5rem;
+  font: inherit;
+
+  /* Place on top of each other */
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.scm-success{
+color: green;
+}
+
+.scm-error{
+color: red;
+}

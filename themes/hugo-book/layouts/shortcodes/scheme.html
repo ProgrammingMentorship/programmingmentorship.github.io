@@ -1,0 +1,75 @@
+{{ if not (.Page.Scratch.Get "scheme") }}
+<!-- Include mermaid only first time -->
+<script src="{{ "dist/lips.min.js" | relURL }}" bootstrap></script>
+
+<script>
+function scmEval(e) {
+  if(!lips){
+    console.error("LIPS not loaded.");
+    return 1;
+  }
+
+  console.log(e);
+
+  var out = e + "-out";
+  var output = document.getElementById(out);
+
+  var content = document.getElementById(e).value;
+  console.log(content);
+
+  lips.exec(content).then(
+     function(results) {
+       output.innerHTML = "";
+       results.forEach(function(result) {
+         if(result){
+           console.log(result.toString());
+           var node = document.createElement("p");
+           node.classList.add("scm-success");
+           node.innerHTML = result.toString();
+           output.appendChild(node);
+         }
+         }
+
+       );
+     }
+  ).catch (function(error) {
+    output.innerHTML = "";
+    console.log("Issue encountered while interpreting.");
+    console.log(error.message);
+           var node = document.createElement("p");
+           node.innerHTML = error.message.toString();
+           node.classList.add("scm-error");
+           output.appendChild(node);
+
+    console.error(error);
+  });
+}
+
+</script>
+{{ .Page.Scratch.Set "scheme" true }}
+{{ end }}
+
+{{ if not (.Page.Scratch.Get "scheme-box-id") }}
+  {{ .Page.Scratch.Set "scheme-box-id" 0 }}
+{{ end }}
+
+{{ .Page.Scratch.Add "scheme-box-id" 1 }}
+{{ $i := (.Page.Scratch.Get "scheme-box-id") }}
+
+{{ $code := trim .Inner "\r\n" }}
+
+<div class="schemewrap grow-wrap" data-replicated-value="{{ $code }}">
+<textarea id="scm-{{ $i }}-src" class="schemeblock scheme{{ with .Get "class" }} {{ . }}{{ end }}" onInput="this.parentNode.dataset.replicatedValue = this.value">
+{{ $code }}
+</textarea>
+
+<div class="schemebutton-wrapper">
+<button onclick="scmEval('scm-{{ $i }}-src')" class="schemebutton">Run Program</button>
+</div>
+
+<div id="scm-{{ $i }}-src-out" class="scm-output"></div>
+</div>
+
+
+
+
