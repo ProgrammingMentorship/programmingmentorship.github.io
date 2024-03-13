@@ -62,6 +62,9 @@ margin: 0;
              "Courier New", monospace;
 }
 
+button:disabled, textarea:disabled {
+color: #777;
+}
 
 
 /* From https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/ */

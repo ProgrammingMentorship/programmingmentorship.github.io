@@ -14,8 +14,26 @@ function scmEval(e) {
   var out = e + "-out";
   var output = document.getElementById(out);
 
+  var btn = e + "-btn";
+  var button = document.getElementById(btn);
+
+  var contentBox = document.getElementById(e);
   var content = document.getElementById(e).value;
   console.log(content);
+
+  // Set things.
+  button.innerHTML = "Running..."
+  button.disabled = true
+  contentBox.disabled = true
+
+  function enable(){
+    setTimeout(function(){
+      button.innerHTML = "Run Program"
+      button.disabled = false
+      contentBox.disabled = false
+    }, 400);
+  }
+  
 
   lips.exec(content).then(
      function(results) {
@@ -29,8 +47,8 @@ function scmEval(e) {
            output.appendChild(node);
          }
          }
-
        );
+       enable();
      }
   ).catch (function(error) {
     output.innerHTML = "";
@@ -42,6 +60,7 @@ function scmEval(e) {
            output.appendChild(node);
 
     console.error(error);
+    enable();
   });
 }
 
@@ -64,7 +83,7 @@ function scmEval(e) {
 </textarea>
 
 <div class="schemebutton-wrapper">
-<button onclick="scmEval('scm-{{ $i }}-src')" class="schemebutton">Run Program</button>
+<button id="scm-{{ $i }}-src-btn" onclick="scmEval('scm-{{ $i }}-src')" class="schemebutton">Run Program</button>
 </div>
 
 <div id="scm-{{ $i }}-src-out" class="scm-output"></div>
