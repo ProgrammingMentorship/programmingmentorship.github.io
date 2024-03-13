@@ -1,0 +1,117 @@
+.lips.terminal {
+    --background: #000;
+    --color: #ccc;
+}
+.terminal .token.__doc__::before {
+    color: var(--base-background, #000);
+}
+.terminal-output > :not(.raw) {
+    position: relative;
+}
+.token.__doc__ {
+    cursor: help;
+}
+.token.__doc__:hover::before {
+    display: block;
+    content: attr(data-doc);
+}
+.terminal-tooltip {
+    position: absolute;
+    top: clac(var(--top) * 1px);
+    left: calc(var(--left, 0) * 1px);
+    z-index: 999999;
+    background: var(--color, #ccc);
+    color: var(--background, #000);
+    white-space: pre;
+    padding: 5px;
+    pointer-events:none;
+}
+.terminal-tooltip.__doc__.top {
+    top: calc(var(--top) * 1px);
+    transform: translateY(-100%);
+}
+.terminal-tooltip.__doc__ {
+    top: calc(var(--top) * 1px + var(--size, 1) * 16px);
+}
+.terminal-tooltip.__doc__.right {
+    left: calc(var(--right) * 1px);
+    transform: translateX(-100%);
+}
+.terminal-tooltip.__doc__.right.top {
+    transform: translate(-100%, -100%);
+}
+.shell-container {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+}
+.shell-wrapper nav {
+    cursor: row-resize; color:#ccc;
+    border-bottom: 1px solid #ccc;
+    font-family: monospace;
+    text-align: right;
+    background:black;
+    font-size: 13px;
+    line-height: initial;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.shell-wrapper .shell-dock::before {
+    content: "[■]";
+}
+.shell-wrapper.docking .shell-dock::before {
+    content: "[_]";
+}
+.shell-wrapper .shell-dock,
+.shell-wrapper .shell-destroy {
+    padding: 5px 3px;
+    cursor: pointer;
+    display: inline-block;
+}
+.shell-wrapper.docking nav {
+    cursor: default;
+}
+.shell-wrapper:not(.docking) .shell-container {
+    width: 100% !important;
+}
+.shell-wrapper.docking .shell-container {
+    bottom: auto;
+    right: auto;
+    top:  calc(var(--top, 0) * 1px);
+    left:  calc(var(--left, 0) * 1px);
+    width: calc(var(--width, 500) * 1px);
+    height: calc(var(--height, 400) * 1px);
+    resize: both;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px 2px rgb(0 0 0 / 30%);
+}
+.terminal.lips, .terminal.terminal-tooltip {
+    --size: 1.2;
+}
+.terminal.terminal-tooltip {
+    display: none;
+}
+.terminal.terminal-tooltip.__doc__ {
+    display: block;
+}
+.shell-wrapper .terminal.lips {
+    font-size-adjust: none;
+    height: calc(100% - 26px);
+}
+.shell-wrapper .shell-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 100
+}
+.shell-wrapper.drag .shell-mask {
+    display: block;
+}
