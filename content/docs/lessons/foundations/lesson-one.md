@@ -120,28 +120,49 @@ differently by our computer compared to the _numbers_ we have seen previously.
 Every programming lanugage has a series of categories to describe the **values**
 it can work with. We refer to each of these categories as **types**.
 
-We can call the _type_ operator to see what **type** a particular value has
+We can call the _get-type_ operator to see what **type** a particular value has
 
 {{< scheme >}}
-(type 5)
-(type 5.2)
-(type "Hello, I am a String of text")
-(type true)
-(type false)
+(get-type 5)
+(get-type 5.2)
+(get-type "Hello, I am a String of text")
+(get-type true)
+(get-type false)
 {{< /scheme >}}
+
+Notice the text above is referred to as a _string_. In almost all programming languages
+strings use double quotes _" "_ to enclose the text and turn it into a **value**
+that we can do _something_ with. 
+
+For example let's say that we wanted to write a program to capitalize every
+character of a string. To do this we can make use of the _string-upcase_
+operator and pass it a string of text.
+
+{{< scheme >}}
+
+(string-upcase  "I am text, that can be operated on.")
+
+{{< /scheme >}}
+
+When the program is run, all characters in the string are changed to be all
+capitals. In the same way that we perform operations on a number through an
+**expression**. We can also perform operations on a string through an **expression**.
+
+We perform a series of **operations** on **values** by using **expressions**. 
+Each **expression** has an **operator** and a **return value** whenever the expression is evaluated.
+Just like the input values have types, the return values also have types.
 
 We have other **types** as well, but we will cover these at a later date
 
 {{< scheme >}}
-(type /)
-(type nil)
-(type 'x)
-(type #\a)
-(type (list  1 2 3 4))
+(get-type /)
+(get-type nil)
+(get-type 'x)
+(get-type #\a)
+(get-type (list  1 2 3 4))
 {{< /scheme >}}
 
-### **TODO** _Add custom type function to show difference between integers and floats_
-### **TODO** _Add string capitalize function to show another way expressions can perform operations_
+
 
 Part of the reason that we care about the **type** a **value** has is so that we
 can store them for later use. This is what we will cover in the next section.
