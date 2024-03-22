@@ -18,3 +18,16 @@ submit changes for consideration.
 
 1. [**Lesson One:**]({{< relref "/docs/lessons/foundations/lesson-one" >}})
    Expressions, variables, and functions.
+
+
+
+# Goals
+
+The course will be structured with the three sections below.
+
+1) Create a terminal (aka command line) application
+
+2) Create a desktop application 
+
+3) Create a web application 
+
