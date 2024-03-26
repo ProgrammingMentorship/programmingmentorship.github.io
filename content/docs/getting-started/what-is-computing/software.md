@@ -9,14 +9,28 @@ Software is the easiest part of a computing system to adjust and tinker with.
 Unlike hardware and processors which are expensive to change (you have to get a
 job at Intel,) or massive computer networks, you can write a few lines of code
 and change the behaviour of your computer in moments at the software level. This
-is where (for us, today,) the magic happens.
-
-A combination of hardware and software connects computers into systems called
-[networks]({{< relref "/docs/getting-started/what-is-computing/networks" >}}).
+is where (for us today) the magic happens.
 
 Software is divided into layers that build on top of each other from the ones
 and zeros all the way _up_ to the complex network architectures we take for
-granted today.
+granted today. The main things to understand right now are the concepts of
+**layers** and how these form **abstractions** that we can use to develop
+software more efficiently. If we can pick the right **abstractions** for our
+problem we can avoid having to reinvent the wheel with every new program we
+write.
+
+>An **abstraction** in software is something that hides the details of the
+implementation underneath a simple interface. For example if you press on the
+gas pedal of a car, a sequence of much more complicated interactions occurs in
+order to feed gas to the engine and cause the car to accelerate. As a
+driver/user of the vehicle, you only need to worry about how much you press the
+pedal down and it allows you to focus on more important things such as not
+crashing the vehicle. Another example is when you move your mouse across the
+screen. There are many layers of both hardware and software that are combined to
+ensure that the mouse moves smoothly. Imagine if every program had to read
+directly from the light or trackball sensors on the mouse to determine how fast
+to move the cursor across the screen. **Abstractions** are one of the most fundametal
+concepts in the design of software.
 
 Let's start by exploring the **operating system** layer since that is where we
 do most of our interaction with a computer.
@@ -131,7 +145,7 @@ flowchart LR
 {{< /mermaid >}}
 
 If we write each of our programs to run on Java then we will be able to run them
-on Windows, MAc, Linux, iPhone, Android... Whatever we want.
+on Windows, Mac, Linux, iPhone, Android... Whatever we want.
 
 The exception to this is if we were to write a program to integrate with the
 camera on an iPhone for example, that code would obviously not work to access a
