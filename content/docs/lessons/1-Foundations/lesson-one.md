@@ -213,16 +213,16 @@ x
 
 Now what is the type of _x_?
 {{<scheme >}} 
-(type x)
+(get-type x)
 {{< /scheme >}}
 
 We can store different things inside of _x_ and we will get a different type
 
 {{<scheme >}}
 (define x 0)
-(type x)
+(get-type x)
 (define x "Hello, I am a string!!")
-(type x)
+(get-type x)
 (define x true)
 (type x)
 

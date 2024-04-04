@@ -89,8 +89,8 @@ in our programming languages, but for now just think of these as the simplest
 file.
 
 Binary files are not human readable. They consist of ones and zeros (often shown
-as [hexadecimal]({{< relref "/docs/lessons/appendix/binary-and-hexadecimal" >}})
-or [unicode]({{< relref "/docs/lessons/appendix/ascii-and-unicode" >}})
+as [hexadecimal]({{< relref "/docs/Appendix/binary-and-hexadecimal" >}})
+or [unicode]({{< relref "/docs/Appendix/ascii-and-unicode" >}})
 characters depending on how we try to read the file)
 
 
@@ -118,7 +118,7 @@ And a drawing!
 ```
 
 Plain text has no formatting or anything associated with it. It is just [ASCII
-or Unicode characters]({{< relref "/docs/lessons/appendix/ascii-and-unicode"
+or Unicode characters]({{< relref "/docs/Appendix/ascii-and-unicode"
 >}}) in one gigantic sequential list. In fact we could decide to read this file
 one line at a time and form what is called a **stream** but that is a topic for
 another time.

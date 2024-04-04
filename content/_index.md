@@ -47,7 +47,7 @@ proud of.
 
 {{< hint warning >}}
 **Site Under Construction**  
-Our first course is called [**Foundations**]({{< relref "/docs/lessons/foundations" >}})
+Our first course is called [**Foundations**]({{< relref "/docs/lessons/1-Foundations" >}})
 and can be previewed now.
 {{< /hint >}}
 

@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: "Foundations"
+title: "1 - Foundations"
 ---
 
 
@@ -47,8 +47,8 @@ programming:**
 1. **Data**, which flows in and out of computer systems
 2. **Functions**, which read and transform data
 
-Begin by reading the [**Course Outline**]({{< relref "/docs/lessons/foundations/course-outline" >}}),
-or skip to  [**Lesson One**]({{< relref "/docs/lessons/foundations/lesson-one" >}}).
+Begin by reading the [**Course Outline**]({{< relref "/docs/lessons/1-Foundations/course-outline" >}}),
+or skip to  [**Lesson One**]({{< relref "/docs/lessons/1-Foundations/lesson-one" >}}).
 
 
 {{< mermaid >}}

@@ -12,7 +12,7 @@ weight: 3
 With clojure or any high level language we don't often have to work with ascii characters, but they are still good to know about.
 
 Fundamentally our computer can only store or process things as Ones and Zeros. With these _binary numbers_ we can represent essentially any information that we want to provided that we have an **encoding scheme** to accompany it.
->For more info on binary numbers see [**Binary Numbers**]({{< relref "/docs/lessons/appendix/binary-and-hexadecimal" >}}) appendix.
+>For more info on binary numbers see [**Binary Numbers**]({{< relref "/docs/Appendix/binary-and-hexadecimal" >}}) appendix.
 
 One of the most universal encoding schemes is what are called **ascii numbers**. With ASCII we can represent 128 different characters. These roughly correlate to the characters you can type on a standard keyboard.
 > See [ascii-code.com](https://www.ascii-code.com/) for full character list.
