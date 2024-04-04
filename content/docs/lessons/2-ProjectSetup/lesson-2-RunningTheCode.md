@@ -18,34 +18,30 @@ students. It may change considerably before first release.
 {{< /hint >}}
 
 
-The main function 
+## The main function 
 
 Any non-trivial program will be made up of many functions and so we need a way that we can specify which function is meant to be called whenever the program starts up. For example, I can write a function that prints "hello" to the screen, but I need to decide when to call that function. 
 
 This is what I would use the "main" function of a program to do. Lets say on program start, I print "Hello" to the screen, wait 5 seconds and then print "goodbye" and exit the program. In clojure this would look like the below 
 
  
+``` clojure
+    (ns trivialprogram.core) 
 
-(ns trivialprogram.core) 
+    (defn PrintHello [] (println "Hello!")) 
 
- 
+    (defn PrintGoodbye [] (println "Goodbye!))
 
-(defn PrintHello [] (println "Hello!")) 
+    (defn -main [] 
 
-(defn PrintGoodbye [] (println "Goodbye!)) 
+    (PrintHello) 
 
- 
+    (Thread/sleep 5000) 
 
-(defn -main [] 
+    (PrintGoodbye) 
 
-(PrintHello) 
-
-(Thread/sleep 5000) 
-
-(PrintGoodbye) 
-
-) 
-
+    ) 
+```
  
 
 Notice the (Thread/sleep 5000) 
@@ -56,8 +52,8 @@ The slash indicates that sleep is a function in the clojure Thread library. This
 
  
 
-Libraries 
-
+## Libraries 
+Probably write this into 
 
 ## Running A Program
 The important thing to understand about using java however is that any code that
@@ -85,33 +81,6 @@ If we want to run a jar file we simply tell the computer terminal to run the
 java file and the program will start 
 
 >_java -jar CompiledFile.jar_ 
-
-
-# Output from a Compiler
-A compiler essentially converts all of our source code into a binary file that
-our computer can easily run. It also packages up any dependencies required to
-run the file and spits it out into a build folder in the target destination of
-our project directory.
-
-For our java programs we are compiling everything into a single file, but this
-is not always the case. If you have ever looked in the program files folder of a
-Windows computer, you will see all the files required for a particular program
-to run.
-
-For example, lets look at a C# program I wrote called the Controller. When I
-compiled the source code and all the project dependencies, the output from the
-compiler looks like the below
-
- ![CSharpCompiledProgramExample](/img/lessonXscreenshot.png)
-
-> If we compile C# for the windows 11 platform using the Microsoft build tools, we
-will get an exe file along with a bunch of other files that are used by the exe
-file to run the program. All of these files are typically stored in the program
-files folder on your computer. 
-
-To run the program from C# we can double click on the controller.exe file or we
-can just call the .exe file in a command terminal. The Exe file starts the
-program but it will reference the other files when it runs.
 
 
 

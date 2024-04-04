@@ -1,6 +1,7 @@
 ---
 weight: 3
 title: "2 - Project Setup"
+bookCollapseSection: true
 ---
 
 
@@ -28,8 +29,9 @@ way to do that in the browser.
 In this section we will cover...
 1. What a **project template** is
 2. How it is **run**
-3. The procedure to **compile** it
-4. How to use the **REPL**
+3. How to use a **code library** and **namespaces**
+4. The procedure to **compile** it
+5. How to use the **REPL**
 
 If we lived in an ideal world we would save this entire section for another
 course, and keep you evaluating code in the browser. However we would be too

@@ -1,6 +1,7 @@
 ---
 weight: 1
 title: "1 - Foundations"
+bookCollapseSection: true
 ---
 
 
