@@ -81,11 +81,10 @@ a second, in fact.
 In the same way cars are designed to drive down the road, computer
 processors are designed to do the following:
 
-- Read the next line in memory
-- Decide what to do 
-- Do it
+1. Read the next instruction in memory
+2. Execute the instruction
 
-It's up to you what to feed these little machines!
+It's up to you what to tell these little machines to do!
 
 **...but how do they get off paper and into your hands?**
 
